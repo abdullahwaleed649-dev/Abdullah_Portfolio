@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registration Form</h1>
+
+        <form action="Thankyou.html" method="get">
+
+            <input type="hidden" name="userID" value="1001">
+
+            <table>
+
+                <tr>
+                    <th colspan="2">Personal Information</th>
+                </tr>
+
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="firstName"
+                        pattern="[A-Za-z]+"
+                        required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="lastName"
+                        pattern="[A-Za-z]+"
+                        required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="password"
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                        title="At least 8 characters, uppercase, lowercase, number and special character"
+                        required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Repeat Password</td>
+                    <td>
+                        <input type="password" name="repeatPassword"
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                        required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>User Picture</td>
+                    <td>
+                        <input type="file" name="picture" accept="image/*">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gender" value="Male" required>
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Faculty</td>
+                    <td>
+                        <select name="faculty" required>
+                            <option value="">Select Faculty</option>
+                            <option>Computers and Information</option>
+                            <option>Engineering</option>
+                            <option>Medicine</option>
+                            <option>Science</option>
+                            <option>Commerce</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">Interests</th>
+                </tr>
+
+                <tr>
+                    <td>Interests</td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="interests" value="Swimming">
+                            Swimming
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="Reading">
+                            Reading
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="Programming">
+                            Programming
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="Football">
+                            Football
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">Additional Information</th>
+                </tr>
+
+                <tr>
+                    <td>About You</td>
+                    <td>
+                        <textarea name="about" rows="4"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number</td>
+                    <td>
+                        <input type="tel" name="phone"
+                        pattern="01[0125][0-9]{8}"
+                        title="Enter a valid Egyptian phone number"
+                        required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>GPA</td>
+                    <td>
+                        <input type="number" name="gpa"
+                        min="0" max="4" step="0.1" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>
+                        <input type="date" name="birthDate" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="terms">
+                        <input type="checkbox" id="agree" required>
+                        <a href="Terms.html" target="_blank">
+                            I agree to the terms and conditions
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
